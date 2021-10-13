@@ -140,9 +140,9 @@ func (m *MemStore) Close() {
 	m.Lock()
 	defer m.Unlock()
 	if !m.opened {
-
 		return
 	}
+	m.done()
 	m.opened = false
 }
 

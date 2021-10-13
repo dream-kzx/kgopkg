@@ -8,7 +8,7 @@ import (
 )
 
 func BenchmarkMemStore(t *testing.B) {
-	memStore := NewMemStore(10)
+	memStore := NewLinkMemStore(10)
 	memStore.Open()
 
 	index := 1
